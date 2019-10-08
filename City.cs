@@ -13,7 +13,7 @@ namespace Planner
         private string _name = "Metropolis";
         private string _mayor = "Jacquelyn McCray";
         private int _year;
-        public List<Building> Buildings { get; set; }
+        public List<Building> Buildings = new List<Building>();
         public void AddBuilding(Building building)
         {
             Buildings.Add(building);

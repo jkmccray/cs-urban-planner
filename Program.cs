@@ -9,7 +9,9 @@ namespace Planner
         {
             City Metropolis = new City();
 
-            Building FiveOneTwoEigth = new Building("512 8th Avenue");
+            Building FiveOneTwoEigth = new Building("512 8th Avenue") {
+
+            };
             FiveOneTwoEigth.Width = 150.5;
             FiveOneTwoEigth.Depth = 50.2;
             FiveOneTwoEigth.Stories = 10;
@@ -35,10 +37,10 @@ namespace Planner
 
             // Metropolis.PrintCityInfo();
 
-            // foreach (Building building in Metropolis.Buildings)
-            // {
-            //     building.PrintBuildingInfo();
-            // }
+            foreach (Building building in Metropolis.Buildings)
+            {
+                building.PrintBuildingInfo();
+            }
         }
     }
 }
