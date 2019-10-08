@@ -7,12 +7,15 @@ namespace Planner
     {
         static void Main(string[] args)
         {
+            City Metropolis = new City();
+
             Building FiveOneTwoEigth = new Building("512 8th Avenue");
             FiveOneTwoEigth.Width = 150.5;
             FiveOneTwoEigth.Depth = 50.2;
             FiveOneTwoEigth.Stories = 10;
             FiveOneTwoEigth.Construct();
             FiveOneTwoEigth.Purchase("Andy");
+            Metropolis.AddBuilding(FiveOneTwoEigth);
 
             Building Office = new Building("301 Plus Park Blvd");
             Office.Width = 100.8;
@@ -20,6 +23,7 @@ namespace Planner
             Office.Stories = 13;
             Office.Construct();
             Office.Purchase("Steve");
+            Metropolis.AddBuilding(Office);
 
             Building School = new Building("100 Education Way");
             School.Width = 50.7;
@@ -27,16 +31,14 @@ namespace Planner
             School.Stories = 2;
             School.Construct();
             School.Purchase("Nashville Metro");
+            Metropolis.AddBuilding(School);
 
-            List<Building> city = new List<Building>
-            {
-                FiveOneTwoEigth, Office, School
-            };
+            // Metropolis.PrintCityInfo();
 
-            foreach (Building building in city)
-            {
-                building.PrintBuildingInfo();
-            }
+            // foreach (Building building in Metropolis.Buildings)
+            // {
+            //     building.PrintBuildingInfo();
+            // }
         }
     }
 }
